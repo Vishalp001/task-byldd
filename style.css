@@ -1,0 +1,569 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* START OF NAVIGATION ITEMS */
+
+.docApp {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+}
+.docApp span {
+  font-weight: 400;
+  transition: 0.1s ease-in-out;
+}
+
+.docApp h3 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: dodgerblue;
+}
+
+.docApp > div {
+  margin: 30px auto;
+  cursor: pointer;
+}
+
+.docApp i {
+  text-align: center;
+  display: block;
+  color: dodgerblue;
+  border-radius: 10px;
+  background-color: aliceblue;
+  font-size: 20px;
+  padding: 20px;
+  margin-bottom: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.docApp i:hover {
+  background-color: dodgerblue;
+  color: #fff;
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.36);
+}
+
+.docApp span:hover {
+  color: dodgerblue;
+  font-weight: 700;
+}
+
+.dummyImage {
+  height: 70px;
+  width: 70px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.dummyName {
+  font-weight: 500 !important;
+}
+.profile {
+  text-align: center;
+}
+.dashboard-icon i {
+  background-color: dodgerblue;
+  color: #fff;
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.36);
+}
+.dashboard-icon span {
+  color: dodgerblue;
+}
+.docApp i:last-child {
+  background-color: #fff;
+  color: rgb(61, 57, 57);
+  display: inline;
+  font-size: 15px;
+}
+
+/* RESOPNSIVE */
+@media only screen and (max-width: 600px) {
+  .docApp {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .docApp h3 {
+    margin-top: 20px;
+  }
+
+  .docApp > div {
+    margin: 10px auto;
+  }
+
+  .docApp i {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+/* END OF NAVIGATION ITEMS */
+
+/* ---------START OF DASHBOARD-------- */
+
+.dashboard {
+  width: 25%;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  padding-left: 70px;
+  padding-right: 20px;
+}
+.dashboard h1 {
+  margin-top: 45px;
+  color: rgb(28, 30, 31);
+  font-size: 40px;
+  font-weight: 700;
+}
+.dashboard p {
+  color: rgb(124, 123, 123);
+  font-size: 20px;
+  margin: 10px auto;
+}
+
+.timeline {
+  margin: 20px 0;
+  border: 1px solid rgb(88, 74, 74);
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(124, 123, 123);
+  font-size: 20px;
+}
+.timeline * {
+  align-self: center;
+  padding: 0 25px;
+}
+
+.timeline > i > span {
+  padding: 0 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.timeline:first-child {
+  background-color: rgb(167, 198, 240);
+}
+
+.timeline:nth-last-child(2) {
+  border: 2px solid dodgerblue;
+  color: dodgerblue;
+  font-weight: bold;
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.36);
+}
+
+hr {
+  width: 100px;
+  margin: 20px auto;
+}
+.dashboard button {
+  padding: 20px 15px;
+  margin: 15px 0;
+  /* width: 90%; */
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.36);
+}
+.btn-1 {
+  color: #fff;
+  background-color: dodgerblue;
+}
+.btn-2 {
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .dashboard {
+    width: 100%;
+    padding: 20px;
+  }
+  .dashboard h1 {
+    margin-top: 20px;
+  }
+
+  .timeline {
+    font-size: 15px;
+  }
+
+  hr {
+    margin: 10px auto;
+  }
+  .dashboard button {
+    padding: 15px 10px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+}
+/* ---------END OF DASHBOARD-------- */
+
+.thirdSection {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 65%;
+  background-color: aliceblue;
+}
+
+/* ROW 1 */
+.row1 {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+}
+.col1 {
+  margin-top: 50px;
+  margin-right: 20px;
+  width: 33.33%;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 25px;
+  box-shadow: 0px 0px 6px 3px rgba(102, 20, 20, 0.26);
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.26);
+}
+.col1 > h1 {
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+.col2 {
+  margin-top: 50px;
+  margin-left: 20px;
+  width: 66.67%;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 25px;
+  box-shadow: 0px 0px 6px 3px rgba(102, 20, 20, 0.26);
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.26);
+}
+.dates {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box {
+  margin: 2px;
+  border-radius: 5px;
+  height: 40px;
+  width: 40px;
+  border: 2px solid rgb(196, 196, 196);
+}
+.box:nth-child(2) {
+  border: 3px solid dodgerblue;
+}
+.box:nth-child(3) {
+  border: 3px solid dodgerblue;
+}
+.box:nth-child(4) {
+  border: 3px solid dodgerblue;
+}
+.box:nth-child(15) {
+  border: 3px solid dodgerblue;
+}
+.box:nth-child(16) {
+  border: 3px solid dodgerblue;
+}
+.box:nth-child(17) {
+  border: 3px solid dodgerblue;
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 7px;
+}
+.box:nth-child(18) {
+  border: 3px solid dodgerblue;
+}
+
+/* -----Col 2 */
+.col2 {
+  display: flex;
+}
+.col2-text {
+  width: 50%;
+}
+.col2-img {
+  width: 50%;
+}
+.col2-text * {
+  margin-bottom: 25px;
+}
+.col2-text p {
+  font-size: 20px;
+}
+.col2-text * {
+  margin-bottom: 25px;
+}
+.col2-text button {
+  background: dodgerblue;
+  border: none;
+  padding: 16px;
+  width: 250px;
+  border-radius: 15px;
+  font-size: 18px;
+  color: #fff;
+  box-shadow: 0px 0px 6px 3px rgba(102, 20, 20, 0.15);
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* col2 Image */
+.col2-img > img {
+  width: 100%;
+}
+/* col2-text */
+
+.col2-text p {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .thirdSection {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    width: 100% !important;
+  }
+
+  /* ROW 1 */
+  .row1 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .col1 {
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  .col2 {
+    margin: 15px auto;
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  /* -----Col 2 */
+
+  .col2-text button {
+    padding: 10px;
+  }
+}
+
+/* -- -------ROW TWO------ */
+.row2 {
+  margin-top: 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 6px 3px rgba(102, 20, 20, 0.32);
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.32);
+}
+.appointmentsRow {
+  margin: 25px;
+}
+.usersAppointment {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.usersAppointment > .user {
+  border-radius: 15px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 6px 3px rgba(102, 20, 20, 0.15);
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.15);
+}
+.user > i {
+  text-align: center;
+  display: block;
+  color: dodgerblue;
+  border-radius: 30%;
+  background-color: aliceblue;
+  font-size: 20px;
+  padding: 20px 5px;
+  margin-bottom: 5px;
+  transition: 0.3s ease-in-out;
+}
+.user:first-child {
+  border: 2.5px solid dodgerblue;
+}
+.user p {
+  color: rgb(54, 53, 53);
+}
+.user-name {
+  font-weight: 700;
+  color: black !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .row2 {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .appointmentsRow {
+    margin: 25px auto;
+  }
+  .usersAppointment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .usersAppointment > .user {
+    border-radius: 15px;
+    margin: 5px;
+    padding: 5px;
+  }
+  .user > i {
+    text-align: center;
+    display: block;
+    color: dodgerblue;
+    border-radius: 30%;
+    background-color: aliceblue;
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 5px;
+    transition: 0.3s ease-in-out;
+  }
+}
+/* ----------MONTHLY REPORTS------- */
+.monthlyReports {
+  display: flex;
+}
+.reportHeadind h1 {
+  margin: 45px;
+}
+.monthlyReports-Icon i {
+  text-align: center;
+  display: block;
+  color: dodgerblue;
+  border-radius: 10px;
+  background-color: aliceblue;
+  font-size: 15px;
+  padding: 15px;
+  margin-bottom: 5px;
+  transition: 0.3s ease-in-out;
+}
+.report-1,
+.report-2 {
+  display: flex;
+  width: 50%;
+  margin: 25px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px 3px rgba(102, 20, 20, 0.15);
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.15);
+}
+
+.reports-progressbar > p {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+}
+
+#progressbar1 {
+  background-color: aliceblue;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar1 > div {
+  background-color: deepskyblue;
+  width: 85%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+  text-align: end;
+  color: #fff;
+  padding-right: 15px;
+}
+
+#progressbar2 {
+  background-color: aliceblue;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar2 > div {
+  background-color: deepskyblue;
+  width: 75%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+  text-align: end;
+  color: #fff;
+  padding-right: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .monthlyReports {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .reportHeadind h1 {
+    margin: 20px auto;
+  }
+  .monthlyReports-Icon i {
+    text-align: start;
+    display: block;
+    color: dodgerblue;
+    border-radius: 10px;
+    background-color: aliceblue;
+    font-size: 15px;
+    padding: 5px;
+    margin-bottom: 5px;
+    transition: 0.3s ease-in-out;
+  }
+  .report-1,
+  .report-2 {
+    display: flex;
+    width: 100%;
+    margin: 25px;
+    padding: 5px;
+  }
+
+  .reports-progressbar > p {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    width: 100%;
+  }
+}
+
+/* ---------Responsive for laptop-------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .dashboard {
+    width: 25%;
+    padding: 20px;
+  }
+}
